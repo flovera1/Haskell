@@ -25,12 +25,11 @@ factorial n = case n of
 	n | n > 0 -> n * factorial (n - 1)
 	otherwise -> error "negative number"
 
+factorial2 0 = 1
+factorial2 n | n > 0 = n * factorial2 (n - 1)
+factorial2 _ = error "negative number"
 
 
-
-factorial' 0 = 1
-factorial' n | n > 0 = n * factorial' (n - 1)
-factorial' _ = error "negative number"
 
 
 
