@@ -29,7 +29,13 @@ factorial2 0 = 1
 factorial2 n | n > 0 = n * factorial2 (n - 1)
 factorial2 _ = error "negative number"
 
-
+-- potencia
+potencia :: FLoat -> Integer -> Float
+potencia b n
+	| n == 0 = 1
+	| n < 0 = 1 / potencia b (-n)
+	| n > 0 = b * potencia b (n - 1)
+	
 
 
 
